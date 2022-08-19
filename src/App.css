@@ -5,6 +5,10 @@
     padding: 0;
 }
 
+#root {
+    white-space: pre-line;
+  }
+
 /* width */
 ::-webkit-scrollbar {
     width: 0px;
@@ -39,4 +43,10 @@ a {
     background-color: #131313;
     color: #ffffff;
     margin: 0 !important;
+}
+
+#typing-write {
+    font-size: 40px;
+    margin-top: 160px;
+    font-family: 'IBM Plex Mono';
 }
