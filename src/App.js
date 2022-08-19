@@ -1,24 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import { Navbar, Homepage, PageNotFound } from './components';
+import i18n from 'i18next';
+import { initReactI18next, useTranslation } from 'react-i18next'
+import { Suspense } from 'react';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    const { t } = useTranslation();
+
+    return (
+        // <Suspense fallback="Loading..">
+            <div className='app'>
+                <div className='navbar'>
+                    <Navbar />
+                </div>
+                <div className='main'>
+                    <div className='routes'>
+                        <Routes>
+                            <Route exact path='/' element={<Homepage/>} />
+                            <Route path="*" element={<PageNotFound />} />
+                        </Routes>
+                    </div>
+                    <div className='footer'>
+                    
+                    </div>
+                </div>
+            </div>
+        // </Suspense>
   );
 }
 

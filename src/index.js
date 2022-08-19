@@ -1,17 +1,32 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter as Router } from "react-router-dom";
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next'
+import en from './lang/en.json'
+import es from './lang/es.json'
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { Suspense } from 'react';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const container = document.getElementById('root');
+const root = createRoot(container);
+
+i18n
+    .use(initReactI18next)
+    .init({
+        resources: {
+            en:{ translation: en },
+            es:{ translation: es },
+        },
+        lng: 'en',
+        fallbackLng: 'en',
+        interpolation: { escapeValue: false }
+    })
+
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <Suspense fallback="Loading..">
+        <Router>
+            <App />
+        </Router>
+    </Suspense>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
