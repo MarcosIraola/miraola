@@ -30,8 +30,8 @@ const Navbar = () => {
                 {/* <Link to='/'>Tw</Link>
                 <Link to='/'>In</Link> */}
                 <select onChange={onChange}>
-                    <option value='es'>ES</option>
                     <option value='en'>EN</option>
+                    <option value='es'>ES</option>
                 </select>
             </div>
         </div>

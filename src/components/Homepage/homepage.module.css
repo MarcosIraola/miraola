@@ -4,7 +4,13 @@
     margin: 0 auto;
 }
 
-.title {
+.container div {
     margin-top: 170px;
+    font-family: 'IBM Plex Mono';
+    font-size: 40px;
+}
+
+.title {
+    margin-top: 130px;
     font-family: 'IBM Plex Mono';
 }

@@ -1,8 +1,0 @@
-.typing_effect_cursor::after {
-  content: "";
-  position: absolute;
-  margin-top: 0px;
-  height: 2.9vh;
-  /* border-right: 0.1vw solid #ffffff; */
-  animation: blink 1s infinite ease;
-}

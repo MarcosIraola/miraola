@@ -1,6 +1,7 @@
 {
     "home": {
-        "hello-world": "Hola, soy Marcos. \n Desarrollador front end y artista visual.",
-        "description": "Desarrollador front end y artista visual"
+        "hello-world": "Hola, soy Marcos.",
+        "description": "\n Desarrollador front end y artista visual.",
+        "continue": "\n \n Apreta enter para continuar.."
     }
 }
